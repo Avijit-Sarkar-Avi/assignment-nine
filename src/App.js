@@ -4,6 +4,7 @@ import Blog from './Component/Blog/Blog';
 import Chart from './Component/Chart/Chart';
 import Error from './Component/Error/Error';
 import Home from './Component/Home/Home';
+import Quiz from './Component/Quiz/Quiz';
 import Main from './Layout/Main';
 
 function App() {
@@ -25,6 +26,11 @@ function App() {
         {
           path: '/chart',
           element: <Chart></Chart>
+        },
+        {
+          path: '/cart/:id',
+          element: <Quiz></Quiz>,
+          loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
         },
         {
           path: '/blog',

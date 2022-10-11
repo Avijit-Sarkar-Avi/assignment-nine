@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Cart = ({ cart }) => {
-    const { name, logo, total } = cart
+    const { id, name, logo, total } = cart
     return (
         <div>
             <div className="card card-compact w-9/12 shadow-xl bg-blue-400">
@@ -10,7 +11,7 @@ const Cart = ({ cart }) => {
                     <h2 className="card-title">Name: {name}</h2>
                     <p>Total Quiz: {total}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Start Quiz</button>
+                        <button className="btn btn-primary"><Link to={`/cart/${id}`}>Start Quiz</Link></button>
                     </div>
                 </div>
             </div>
