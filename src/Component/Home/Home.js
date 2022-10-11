@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Cart from '../Cart/Cart';
 
 const Home = () => {
     const carts = useLoaderData()
@@ -10,7 +11,13 @@ const Home = () => {
                 <h1>Choose any Tropic and Start Your Quiz</h1>
             </div>
             <div>
-                <h1>My data is {carts.length}</h1>
+                {
+                    carts.data.map(cart =>
+                        <Cart
+                            key={cart.id}
+                            cart={cart}
+                        ></Cart>)
+                }
             </div>
 
         </div>
