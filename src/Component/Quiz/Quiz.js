@@ -10,7 +10,7 @@ const Quiz = () => {
         <div>
             <h1 className='text-2xl text-center'>Tropic: {quizs.data.name}</h1>
             <div className='p-10'>
-                <div className='border-2 border-red-500'>
+                <div>
 
                     {
                         quizs.data.questions.map(yourQuiz =>
