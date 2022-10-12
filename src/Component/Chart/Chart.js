@@ -21,13 +21,12 @@ const Chart = () => {
     }, [])
     return (
 
-        <BarChart width={500} height={400} data={chart}>
+        <BarChart width={250} height={200} data={chart}>
             <Bar dataKey="total" fill="#8884d8" />
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip></Tooltip>
         </BarChart>
-
     );
 };
 
